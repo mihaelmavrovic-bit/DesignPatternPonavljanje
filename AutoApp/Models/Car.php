@@ -2,7 +2,6 @@
 
 namespace AutoApp\Models;
 
-
 class Car{
 
     public function __construct(
@@ -18,18 +17,8 @@ class Car{
 
         return "{$this->id} - {$this->naziv}, ({$this->godiste}), tio {$this->naziv}";
 
-    }
-        
- 
-
-
+    }    
 
 }
-
-
-
-
-
-
 
 ?>

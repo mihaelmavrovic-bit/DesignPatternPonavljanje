@@ -1,14 +1,10 @@
 <?php
 
-
 namespace AutoApp\Models;
 
 use Iterator;
 
-
 class CarCollection implements Iterator{
-
-
 
     private array $cars = [];
 
@@ -36,9 +32,7 @@ class CarCollection implements Iterator{
 
     public function count(): int{
         return count($this->cars);
-    }
-
-
+        }
 }
 
 
