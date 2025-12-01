@@ -1,11 +1,12 @@
 <?php
 
 namespace AutoApp\Factory;
-
+require_once "autoload.php";
  use AutoApp\Models\Car;
-use AutoApp\Models\CarCollection;
-use AutoApp\Models\CarType;
+ use AutoApp\Models\CarCollection;
+ use AutoApp\Models\CarType;
  use AutoApp\Observers\ObserverInterface;
+ use AutoApp\Observers\ProductionNotifier;
 
 
 class CarFactory{
