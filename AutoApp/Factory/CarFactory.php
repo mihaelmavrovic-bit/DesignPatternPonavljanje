@@ -1,13 +1,11 @@
 <?php
 
 namespace AutoApp\Factory;
-require_once "autoload.php";
+
  use AutoApp\Models\Car;
  use AutoApp\Models\CarCollection;
  use AutoApp\Models\CarType;
  use AutoApp\Observers\ObserverInterface;
- use AutoApp\Observers\ProductionNotifier;
-
 
 class CarFactory{
 
@@ -21,17 +19,17 @@ class CarFactory{
         $this->carCollection = new CarCollection();
     }
     
-    public function attachObserver(ObserverInterface $obs): void{
-
+    public function attachObserver(ObserverInterface $obs){
     $this->observers[] = $obs;
     }
-    public function notifyObservers(string $msg): void {
+
+    public function notifyObservers(string $msg){
         foreach($this->observers as $obs){
          $obs->update($msg);
         }
     }
 
-    public function createCar(string $naziv, int $godiste, string $tipNaziv): Car{
+    public function createCar(string $naziv, int $godiste, string $tipNaziv):Car{
 
         $tip= new CarType(rand(1,100),$tipNaziv);
         $car = new Car(

@@ -15,7 +15,7 @@ class Car{
 
     public function info(): string{
 
-        return "{$this->id} - {$this->naziv}, ({$this->godiste}), tio {$this->naziv}";
+        return "{$this->id} - {$this->naziv}, ({$this->godiste}), tip {$this->tip->naziv}";
 
     }    
 

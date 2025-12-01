@@ -8,7 +8,7 @@ class ProductionNotifier implements ObserverInterface{
 
 
     public function update (string $message): void{
-        echo "<br>Obavvjest za {$this->korisnik}: {$message}.";
+        echo "<br>Obavijest za {$this->korisnik}: {$message}.";
     }
 
 

@@ -8,7 +8,6 @@ use Iterator;
 class CarCollection implements Iterator{
 
     private array $cars = [];
-
     private int $position = 0;
 
     public function current(): mixed  {
@@ -25,7 +24,6 @@ class CarCollection implements Iterator{
 
     public function valid(): bool{
         return isset($this->cars[$this->position]);}
-
 
     public function add(Car $car): void{
         $this->cars[] = $car;
